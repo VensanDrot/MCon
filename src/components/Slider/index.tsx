@@ -24,8 +24,7 @@ const Slider: FC<IProps> = ({ data, size, index }) => {
     if (!size) return 3;
     if (size > 1400) {
       return 3;
-    } else if (size > 800) {
-      console.log(3);
+    } else if (size > 500) {
       return 2;
     } else {
       return 1;
