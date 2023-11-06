@@ -1,0 +1,51 @@
+.swiper {
+  width: 100%;
+  overflow: hidden;
+  height: 400px;
+ 
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+  
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  aspect-ratio: 1 / 1;
+  object-position: center;
+  object-fit: contain;
+}
+
+.swiper-button-next {
+  right: var(--swiper-navigation-sides-offset, 20px);
+}
+
+.swiper-button-prev {
+  left: var(--swiper-navigation-sides-offset, 20px);
+}
+
+@media screen and (max-width: 1050px) {
+  .swiper-button-next {
+  right: var(--swiper-navigation-sides-offset, 0px);
+}
+
+.swiper-button-prev {
+  left: var(--swiper-navigation-sides-offset, 0px);
+}
+}
+
+@media screen and (max-width: 650px) {
+  .swiper-button-next {
+  right: var(--swiper-navigation-sides-offset, -20px);
+}
+
+.swiper-button-prev {
+  left: var(--swiper-navigation-sides-offset, -20px);
+}
+}

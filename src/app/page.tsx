@@ -1,95 +1,52 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
+import React, { useState } from "react";
+import styles from "./page.module.css";
+import Slider from "@/components/Slider";
+import { handrail, elements, gates } from "@/components/Data";
 
 export default function Home() {
+  const [width, setWidth] = useState<number>(window.innerWidth);
+  const isBrowser = () => typeof window !== "undefined";
+  console.log(width);
+  const changeWidth = () => {
+    setWidth(window.innerWidth);
+  };
+
+  if (isBrowser()) {
+    window.addEventListener("resize", changeWidth);
+  }
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
+    <main className={`${styles.main}  `}>
+      <section className={`spacer ${styles.sec}`}>
+        <div className={styles.text_holder}>
+          <h1>Превращаем метал в искуство!</h1>
+          <a href="#handrails" className="yellow">
+            Посмотреть коталог
           </a>
         </div>
+      </section>
+
+      <div id="handrails" className={`spacer ${styles.slider_container} `}>
+        <h1>Перила</h1>
+        <div>
+          <Slider data={handrail} size={width} index={"1"} />
+        </div>
       </div>
+      <div id="gates" className={`spacer ${styles.slider_container} `}>
+        <h1>Ворота и двери</h1>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+        <div>
+          <Slider data={gates} size={width} index={"2"} />
+        </div>
       </div>
+      <div id="elements" className={`spacer ${styles.slider_container} `}>
+        <h1>Элементы</h1>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        <div>
+          <Slider data={elements} size={width} index={"3"} />
+        </div>
       </div>
     </main>
-  )
+  );
 }
