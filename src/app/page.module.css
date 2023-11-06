@@ -17,6 +17,7 @@
 }
 
 .text_holder {
+  position: relative;
   width: 65%;
   height: 75%;
   padding: 1.5rem;
