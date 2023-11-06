@@ -15,12 +15,13 @@ interface IProps {
   data: {
     link: string;
   }[];
-  size: number;
+  size: number | undefined;
   index: string;
 }
 
 const Slider: FC<IProps> = ({ data, size, index }) => {
   const calc = () => {
+    if (!size) return 3;
     if (size > 1400) {
       return 3;
     } else if (size > 800) {
