@@ -54,7 +54,14 @@ const Slider: FC<IProps> = ({ data, size, index }) => {
           {data.map((e, index) => {
             return (
               <SwiperSlide key={index}>
-                <Image alt="The guitarist in the concert." src={e.link} width={100} height={100} layout="responsive" />
+                <Image
+                  alt="The guitarist in the concert."
+                  src={e.link}
+                  width={100}
+                  height={100}
+                  layout="responsive"
+                  loading="lazy"
+                />
               </SwiperSlide>
             );
           })}
