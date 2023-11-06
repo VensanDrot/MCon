@@ -24,9 +24,9 @@ export default function Home() {
     <main className={`${styles.main}  `}>
       <section className={`spacer ${styles.sec}`}>
         <div className={styles.text_holder}>
-          <h1>Превращаем метал в искуство!</h1>
+          <h1>Превращаем металл в искуство!</h1>
           <a href="#handrails" className="yellow">
-            Посмотреть коталог
+            Посмотреть каталог
           </a>
         </div>
       </section>
