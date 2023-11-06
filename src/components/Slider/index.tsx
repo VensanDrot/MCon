@@ -8,34 +8,21 @@ import Image from "next/image";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
 import "./index.css";
 
 interface IProps {
   data: {
     link: string;
   }[];
-  size: number | undefined;
+
   index: string;
 }
 
-const Slider: FC<IProps> = ({ data, size, index }) => {
-  const calc = () => {
-    if (!size) return 3;
-    if (size > 1400) {
-      return 3;
-    } else if (size > 500) {
-      return 2;
-    } else {
-      return 1;
-    }
-  };
-
+const Slider: FC<IProps> = ({ data, index }) => {
   return (
     <>
       <div className={styles.swiper_box}>
         <Swiper
-          slidesPerView={calc()}
           spaceBetween={30}
           centeredSlides={true}
           loop={true}
@@ -47,7 +34,19 @@ const Slider: FC<IProps> = ({ data, size, index }) => {
             nextEl: `.next${index}`,
             prevEl: `.prev${index}`,
           }}
-          modules={[Autoplay, Navigation]}
+          breakpoints={{
+            600: {
+              slidesPerView: 1,
+            },
+            610: {
+              slidesPerView: 2,
+            },
+            1400: {
+              slidesPerView: 3,
+            },
+          }}
+          pagination={true}
+          modules={[Autoplay, Navigation, Pagination]}
           className="mySwiper"
         >
           {data.map((e, index) => {
@@ -65,7 +64,7 @@ const Slider: FC<IProps> = ({ data, size, index }) => {
             );
           })}
         </Swiper>
-        <div className="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"></div>
+
         <div className={`swiper-button-next next${index}`}></div>
         <div className={`swiper-button-prev prev${index}`}></div>
       </div>

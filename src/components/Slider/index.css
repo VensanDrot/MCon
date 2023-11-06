@@ -1,8 +1,12 @@
 .swiper {
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   height: 400px;
  
+}
+
+.swiper-contrainer {
+  overflow: visible;
 }
 
 .swiper-slide {
@@ -22,6 +26,16 @@
   object-fit: contain;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+   color: var(--orange); 
+}
+.swiper-pagination-bullet {
+  background: var(--white);
+}
+ 
+
+
 .swiper-button-next {
   right: var(--swiper-navigation-sides-offset, 20px);
 }
@@ -29,6 +43,8 @@
 .swiper-button-prev {
   left: var(--swiper-navigation-sides-offset, 20px);
 }
+
+
 
 @media screen and (max-width: 1050px) {
   .swiper-button-next {

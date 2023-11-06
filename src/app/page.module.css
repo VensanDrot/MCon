@@ -45,9 +45,13 @@
 }
 
 .slider_container > h1 {
+  color: var(--white);
   font-size: 2rem;
 }
 
+.last {
+  margin-bottom: 50px;
+}
 
 @media screen and (max-width: 1400px) {
    .sec {

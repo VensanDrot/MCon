@@ -34,21 +34,21 @@ export default function Home() {
       <div id="handrails" className={`spacer ${styles.slider_container} `}>
         <h1>Перила</h1>
         <div>
-          <Slider data={handrail} size={width} index={"1"} />
+          <Slider data={handrail} index={"1"} />
         </div>
       </div>
       <div id="gates" className={`spacer ${styles.slider_container} `}>
         <h1>Ворота и двери</h1>
 
         <div>
-          <Slider data={gates} size={width} index={"2"} />
+          <Slider data={gates} index={"2"} />
         </div>
       </div>
       <div id="elements" className={`spacer ${styles.slider_container} `}>
         <h1>Элементы</h1>
 
-        <div>
-          <Slider data={elements} size={width} index={"3"} />
+        <div className={styles.last}>
+          <Slider data={elements} index={"3"} />
         </div>
       </div>
     </main>
