@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className={styles.main_footer}>
       <h1>MetalWorks</h1>
-      <h1>&copy; All rights reserved as of ${date}</h1>
+      <h1>&copy; All rights reserved. {date}</h1>
     </footer>
   );
 };
