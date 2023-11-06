@@ -26,7 +26,7 @@ const Nav = () => {
       } `}
     >
       <div className={styles.nav_box}>
-        <a href="#" className={styles.nav_img_con}>
+        <a href="/#" className={styles.nav_img_con}>
           <Image src={img} alt="Chilling" className={styles.nav_img} height={100} />
         </a>
 
@@ -61,7 +61,7 @@ const Nav = () => {
           <a href="#elements" onClick={() => setOpen(!isOpen)}>
             Элементы
           </a>
-          <a href="/services" className="yellow" onClick={() => setOpen(!isOpen)}>
+          <a href="#handrails" className="yellow" onClick={() => setOpen(!isOpen)}>
             Просмотреть каталог
           </a>
         </div>
