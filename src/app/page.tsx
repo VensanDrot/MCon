@@ -1,13 +1,17 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import Slider from "@/components/Slider";
 import { handrail, elements, gates } from "@/components/Data";
 
 export default function Home() {
-  const [width, setWidth] = useState<number>(window.innerWidth);
+  const [width, setWidth] = useState<number>();
   const isBrowser = () => typeof window !== "undefined";
-  console.log(width);
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  }, []);
+
   const changeWidth = () => {
     setWidth(window.innerWidth);
   };
