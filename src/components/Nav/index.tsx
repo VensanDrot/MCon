@@ -8,11 +8,22 @@ import usa from "../../../public/usa-flag-round-circle-icon.svg";
 import rus from "../../../public/russia-flag-round-circle-icon.svg";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
+import { usePathname, useRouter } from "next-intl/client";
+import { useSearchParams } from "next/navigation";
 
 const Nav = () => {
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const query = searchParams.get("type");
   const t = useTranslations("nav");
+  const cur = useLocale();
+  const url = query !== null ? `?type=${query}` : "";
+  //navbar control
   const [navbar, setNavbar] = useState(false);
   const [isOpen, setOpen] = useState(false);
+
+  console.log(url);
 
   const isBrowser = () => typeof window !== "undefined";
 
@@ -31,9 +42,9 @@ const Nav = () => {
       } `}
     >
       <div className={styles.nav_box}>
-        <a href="/#" className={styles.nav_img_con}>
+        <Link href="/#" className={styles.nav_img_con}>
           <Image src={img} alt="Chilling" className={styles.nav_img} height={100} />
-        </a>
+        </Link>
 
         <div className={styles.Hamburger_container}>
           <Hamburger size={35} toggled={isOpen} toggle={setOpen} />
@@ -41,21 +52,48 @@ const Nav = () => {
 
         {/* PC Version */}
         <div className={styles.nav_link_holder}>
-          <a href="#handrails">{t("l1")}</a>
-          <a href="#gates">{t("l2")}</a>
-          <a href="#elements">{t("l3")}</a>
-          <Link href={useLocale() === "ru" ? "/en" : "/ru"}>
-            <Image
-              src={useLocale() === "ru" ? usa : rus}
-              height={50}
-              width={50}
-              alt={useLocale() === "ru" ? "/en" : "/ru"}
-            />
+          <Link
+            href={{
+              pathname: `galery`,
+              query: {
+                type: "handrails",
+              },
+            }}
+          >
+            {t("l1")}
+          </Link>
+          <Link
+            href={{
+              pathname: `galery`,
+              query: {
+                type: "gates",
+              },
+            }}
+          >
+            {t("l2")}
+          </Link>
+          <Link
+            href={{
+              pathname: `galery`,
+              query: {
+                type: "elements",
+              },
+            }}
+          >
+            {t("l3")}
           </Link>
 
-          <a href="#handrails" className="yellow">
+          <button
+            onClick={() => {
+              router.replace(pathname + url, { locale: cur === "ru" ? "en" : "ru" });
+            }}
+          >
+            <Image src={cur === "ru" ? usa : rus} height={50} width={50} alt={cur === "ru" ? "/en" : "/ru"} />
+          </button>
+
+          <Link href="/#handrails" className="yellow">
             {t("l4")}
-          </a>
+          </Link>
         </div>
 
         {/* Mobile */}
@@ -66,26 +104,25 @@ const Nav = () => {
             styles.nav_link_holder
           } `}
         >
-          <a href="#handrails" onClick={() => setOpen(!isOpen)}>
+          <Link href="/galery" onClick={() => setOpen(!isOpen)}>
             {t("l1")}
-          </a>
-          <a href="#gates" onClick={() => setOpen(!isOpen)}>
-            {t("l2")}
-          </a>
-          <a href="#elements" onClick={() => setOpen(!isOpen)}>
-            {t("l3")}
-          </a>
-          <Link href={useLocale() === "ru" ? "/en" : "/ru"}>
-            <Image
-              src={useLocale() === "ru" ? usa : rus}
-              height={50}
-              width={50}
-              alt={useLocale() === "ru" ? "/en" : "/ru"}
-            />
           </Link>
-          <a href="#handrails" className="yellow" onClick={() => setOpen(!isOpen)}>
+          <Link href="/galery" onClick={() => setOpen(!isOpen)}>
+            {t("l2")}
+          </Link>
+          <Link href="/galery" onClick={() => setOpen(!isOpen)}>
+            {t("l3")}
+          </Link>
+          <button
+            onClick={() => {
+              router.replace(pathname + url, { locale: cur === "ru" ? "en" : "ru" });
+            }}
+          >
+            <Image src={cur === "ru" ? usa : rus} height={50} width={50} alt={cur === "ru" ? "/en" : "/ru"} />
+          </button>
+          <Link href="/#handrails" className="yellow" onClick={() => setOpen(!isOpen)}>
             {t("l4")}
-          </a>
+          </Link>
         </div>
       </div>
     </header>
@@ -93,3 +130,14 @@ const Nav = () => {
 };
 
 export default Nav;
+
+//  href={{
+//     pathname: `bookingpage`,
+//     query: {
+//       icon: e.icon,
+//       description: e.description,
+//       product: e.name,
+//       price: e.price,
+//       type: e.productType,
+//     },
+//   }}

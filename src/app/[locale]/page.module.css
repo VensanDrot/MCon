@@ -21,8 +21,8 @@
   width: 65%;
   height: 75%;
   padding: 1.5rem;
-  background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(15px);
+  /* background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px); */
 }
 
 .text_holder > h1 {
@@ -59,10 +59,27 @@
   }
     .text_holder {
       width: 100%;
-      height: 100%;
+      height: 80%;
     }
+    .text_holder > h1 {
+    font-size: 3.5rem;
+    width: 50%;
+  }
 }
 
+
+@media screen and (max-width: 1000px) and (min-width: 800px) {
+   
+  
+  .text_holder {
+      width: 95%;
+      height: 65%;
+  }
+  
+ 
+ 
+ 
+}
 
  
 
@@ -74,20 +91,14 @@
   }
   .text_holder {
       width: 95%;
-      height: 70%;
+      height: 75%;
   }
-  .text_holder > h1 {
-    font-size: 2.5rem;
-  }
+  
 
   .text_holder > a {
     font-size: 1.5rem;
   }
-
-  .text_holder {
-      width: 80%;
-      height: 80%;
-  }
+ 
  
 }
 
