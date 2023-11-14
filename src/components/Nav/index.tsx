@@ -104,13 +104,28 @@ const Nav = () => {
             styles.nav_link_holder
           } `}
         >
-          <Link href="/galery" onClick={() => setOpen(!isOpen)}>
+          <Link href={{
+              pathname: `galery`,
+              query: {
+                type: "handrails",
+              },
+            }} onClick={() => setOpen(!isOpen)}>
             {t("l1")}
           </Link>
-          <Link href="/galery" onClick={() => setOpen(!isOpen)}>
+          <Link href={{
+              pathname: `galery`,
+              query: {
+                type: "gates",
+              },
+            }} onClick={() => setOpen(!isOpen)}>
             {t("l2")}
           </Link>
-          <Link href="/galery" onClick={() => setOpen(!isOpen)}>
+          <Link href={{
+              pathname: `galery`,
+              query: {
+                type: "elements",
+              },
+            }} onClick={() => setOpen(!isOpen)}>
             {t("l3")}
           </Link>
           <button
