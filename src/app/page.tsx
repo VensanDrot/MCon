@@ -5,21 +5,6 @@ import Slider from "@/components/Slider";
 import { handrail, elements, gates } from "@/components/Data";
 
 export default function Home() {
-  const [width, setWidth] = useState<number>();
-  const isBrowser = () => typeof window !== "undefined";
-
-  useEffect(() => {
-    setWidth(window.innerWidth);
-  }, []);
-
-  const changeWidth = () => {
-    setWidth(window.innerWidth);
-  };
-
-  if (isBrowser()) {
-    window.addEventListener("resize", changeWidth);
-  }
-
   return (
     <main className={`${styles.main}  `}>
       <section className={`spacer ${styles.sec}`}>
