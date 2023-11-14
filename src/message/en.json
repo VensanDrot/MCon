@@ -2,22 +2,24 @@
     "main_page":{ 
         "head_text": "We turn metal into art!",
         "head_button" : "View Catalog",
+        "ben_head":"Benefits of working with us",
         "ben1": {
-            "header": "Профессиональный Опыт:",
-            "body": "Наша компания обладает многолетним опытом в сфере металлообработки, что позволяет нам выполнять проекты на высоком уровне и в срок."
+            "header": "Professional experience:",
+            "body": "Our company has many years of experience in the field of metalworking, which allows us to complete projects at a high level and on time."
         },
         "ben2": {
-            "header": "Индивидуальный Подход:",
-            "body": "Мы ценим уникальные потребности каждого клиента и предлагаем индивидуальные решения, гарантируя удовлетворение всех требований заказчика."
+            "header": "Individual Approach:",
+            "body": "We value the unique needs of each client and offer customized solutions to ensure that all customer requirements are met."
         },
         "ben3": {
-            "header": "Качество и Надежность:",
-            "body": "Наша фирма использует только высококачественные материалы и современное оборудование, что обеспечивает надежность и долговечность наших металлических изделий."
+            "header": "Quality and Reliability:",
+            "body": "Our company uses only high-quality materials and modern equipment, which ensures the reliability and durability of our metal products."
         },
         "ben4": {
-            "header": "Превосходный Сервис:",
-            "body": "Мы гордимся отличным обслуживанием клиентов, предоставляя профессиональные консультации, оперативные ответы на вопросы и поддержку на всех этапах сотрудничества."
+            "header": "Excellent Service:",
+            "body": "We pride ourselves on excellent customer service, providing professional advice, prompt responses to questions and support every step of the way."
         },
+        
         "h1": "Handrails",
         "h2": "Gates and Doors",
         "h3": "Elements"

@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import styles from "./page.module.css";
 import { handrail, gates, elements } from "@/components/Data";
 import Slider from "@/components/Slider";
+import GetStarted from "@/components/GetStarted";
 
 export default function Index() {
   const t = useTranslations("main_page");
@@ -18,6 +19,7 @@ export default function Index() {
         </div>
       </section>
 
+      <GetStarted />
       <div id="handrails" className={`spacer ${styles.slider_container} `}>
         <h1>{t("h1")}</h1>
         <div>
