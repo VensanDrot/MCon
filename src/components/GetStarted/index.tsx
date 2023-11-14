@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./index.module.css";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import Link from "next/link";
 import exp from "../../../public/exp.jpg";
 import ind from "../../../public/ind.jpg";
 import qual from "../../../public/qual.jpg";
@@ -35,6 +36,9 @@ const GetStarted = () => {
             <p>{t("ben4.body")}</p>
           </li>
         </ol>
+        <Link href={"#handrails"} className="yellow">
+          {t("head_button")}
+        </Link>
       </div>
     </div>
   );
