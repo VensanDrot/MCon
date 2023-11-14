@@ -4,8 +4,13 @@ import { Squash as Hamburger } from "hamburger-react";
 import Image from "next/image";
 import styles from "./index.module.css";
 import img from "../../../public/logo.png";
+import usa from "../../../public/usa-flag-round-circle-icon.svg";
+import rus from "../../../public/russia-flag-round-circle-icon.svg";
+import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
 
 const Nav = () => {
+  const t = useTranslations("nav");
   const [navbar, setNavbar] = useState(false);
   const [isOpen, setOpen] = useState(false);
 
@@ -36,11 +41,20 @@ const Nav = () => {
 
         {/* PC Version */}
         <div className={styles.nav_link_holder}>
-          <a href="#handrails">Перила</a>
-          <a href="#gates">Ворота и двери</a>
-          <a href="#elements">Элементы</a>
+          <a href="#handrails">{t("l1")}</a>
+          <a href="#gates">{t("l2")}</a>
+          <a href="#elements">{t("l3")}</a>
+          <Link href={useLocale() === "ru" ? "/en" : "/ru"}>
+            <Image
+              src={useLocale() === "ru" ? usa : rus}
+              height={50}
+              width={50}
+              alt={useLocale() === "ru" ? "/en" : "/ru"}
+            />
+          </Link>
+
           <a href="#handrails" className="yellow">
-            Просмотреть каталог
+            {t("l4")}
           </a>
         </div>
 
@@ -53,16 +67,24 @@ const Nav = () => {
           } `}
         >
           <a href="#handrails" onClick={() => setOpen(!isOpen)}>
-            Перила
+            {t("l1")}
           </a>
           <a href="#gates" onClick={() => setOpen(!isOpen)}>
-            Ворота и двери
+            {t("l2")}
           </a>
           <a href="#elements" onClick={() => setOpen(!isOpen)}>
-            Элементы
+            {t("l3")}
           </a>
+          <Link href={useLocale() === "ru" ? "/en" : "/ru"}>
+            <Image
+              src={useLocale() === "ru" ? usa : rus}
+              height={50}
+              width={50}
+              alt={useLocale() === "ru" ? "/en" : "/ru"}
+            />
+          </Link>
           <a href="#handrails" className="yellow" onClick={() => setOpen(!isOpen)}>
-            Просмотреть каталог
+            {t("l4")}
           </a>
         </div>
       </div>

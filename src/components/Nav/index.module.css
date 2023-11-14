@@ -67,7 +67,6 @@
 }
 
 .nav_link_holder a:hover{
-    font-weight: 600;
     color: var(--orange);
 }
 
@@ -80,7 +79,7 @@
 
 .nav_link_mobile{
     height: 0;
-    transition: all var(--transition);
+    transition:  var(--transition);
     overflow: hidden;
     display: flex !important;
     position: unset !important;
@@ -92,18 +91,19 @@
 }
 
 .nav_link_mobile_active {
-    height: 200px;
+    height: 250px;
+    transition: ease-in-out var(--transition);
+    overflow: hidden;
 }
 
 .nav_container_mobile{ 
-    
-    height: 290px;
+    overflow: hidden;
+    height: 350px;
     background-color: rgba(255, 255, 255, 1);
 }
 
 .nav_container_mobile  .tooltip{ 
-    display: none !important;
-    
+    height: 0;
 }
 
 

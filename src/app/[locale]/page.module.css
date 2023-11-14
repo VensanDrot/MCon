@@ -8,7 +8,7 @@
 }
 
 .sec {
-  background: url("../../public/bk.jpg") ;
+  background: url("../../../public/bk.jpg") ;
   height: 100vh;
   position: relative;
   background-size: cover;
