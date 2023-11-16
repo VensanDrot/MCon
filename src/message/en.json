@@ -33,7 +33,15 @@
     },
 
     "footer": {
-        "line1": "All rights reserved!"
+        "line1": "All rights reserved!",
+        "h1": "Contact Us",
+        "h2": "Get In Touch",
+        "hold1": "Name",
+        "hold2": "Email",
+        "hold3": "Phone Number",
+        "button": "Submit",
+        "reply": "Message was sent successfully",
+        "b_req": "Bad request"
     },
 
     "galery": {
