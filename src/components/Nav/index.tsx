@@ -23,7 +23,7 @@ const Nav = () => {
   const [navbar, setNavbar] = useState(false);
   const [isOpen, setOpen] = useState(false);
 
-  console.log(url);
+  //console.log(url);
 
   const isBrowser = () => typeof window !== "undefined";
 
@@ -43,7 +43,7 @@ const Nav = () => {
     >
       <div className={styles.nav_box}>
         <Link href="/#" className={styles.nav_img_con}>
-          <Image src={img} alt="Chilling" className={styles.nav_img} height={100} />
+          <Image src={img} alt="Chilling" className={styles.nav_img} height={70} />
         </Link>
 
         <div className={styles.Hamburger_container}>
@@ -104,28 +104,37 @@ const Nav = () => {
             styles.nav_link_holder
           } `}
         >
-          <Link href={{
+          <Link
+            href={{
               pathname: `galery`,
               query: {
                 type: "handrails",
               },
-            }} onClick={() => setOpen(!isOpen)}>
+            }}
+            onClick={() => setOpen(!isOpen)}
+          >
             {t("l1")}
           </Link>
-          <Link href={{
+          <Link
+            href={{
               pathname: `galery`,
               query: {
                 type: "gates",
               },
-            }} onClick={() => setOpen(!isOpen)}>
+            }}
+            onClick={() => setOpen(!isOpen)}
+          >
             {t("l2")}
           </Link>
-          <Link href={{
+          <Link
+            href={{
               pathname: `galery`,
               query: {
                 type: "elements",
               },
-            }} onClick={() => setOpen(!isOpen)}>
+            }}
+            onClick={() => setOpen(!isOpen)}
+          >
             {t("l3")}
           </Link>
           <button

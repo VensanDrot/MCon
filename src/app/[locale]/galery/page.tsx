@@ -5,7 +5,6 @@ import { handrail, elements, gates } from "@/components/Data";
 import styles from "./index.module.css";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { object } from "prop-types";
 
 const Images = () => {
   // queries for data on the page

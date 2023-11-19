@@ -67,15 +67,19 @@ const Footer = () => {
           </a>
           <a href="tel:" target="_blank">
             <AiOutlinePhone />
-            (xxx) xxx xxxx
+            EN: (xxx) xxx xxxx
           </a>
-          <a href="" target="_blank">
+          <a href="tel:" target="_blank">
+            <AiOutlinePhone />
+            RU: (xxx) xxx xxxx
+          </a>
+          {/* <a href="" target="_blank">
             <FaInstagram /> Instagram
           </a>
           <a href="" target="_blank">
             <FaFacebookF />
             Facebook
-          </a>
+          </a> */}
         </div>
         {/* Contact Form */}
 
