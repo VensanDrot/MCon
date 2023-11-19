@@ -43,5 +43,3 @@ export default function Index() {
     </main>
   );
 }
-
-//  <h1>{t("head_text")}</h1>

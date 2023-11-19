@@ -14,7 +14,6 @@ interface IProps {
   data: {
     link: string;
   }[];
-
   index: string;
 }
 
