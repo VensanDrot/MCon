@@ -7,6 +7,7 @@ import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { AiOutlinePhone } from "react-icons/ai";
 import { SiGmail } from "react-icons/si";
 import { useTranslations } from "next-intl";
+import { sendContactForm } from "@/lib/api";
 
 const Footer = () => {
   // data
@@ -31,29 +32,8 @@ const Footer = () => {
 
   // submit form
   const handleClick = async (event: React.FormEvent<HTMLFormElement>) => {
-    // event.preventDefault();
-    // setActive(false);
-    // try {
-    //   await sendContactForm(data)
-    //     .then((res) => res.json())
-    //     .then((json) => {
-    //       if (!json.message.code) {
-    //         setResult(json.message);
-    //         setData({
-    //           name: "",
-    //           email: "",
-    //           number: "",
-    //         });
-    //       } else {
-    //         setResult("Error occured");
-    //       }
-    //       setTimeout(function () {
-    //         setActive(true);
-    //       }, 5500);
-    //     });
-    // } catch (error) {
-    //   console.log(error);
-    // }
+    event.preventDefault();
+    await sendContactForm();
   };
 
   return (
@@ -61,17 +41,17 @@ const Footer = () => {
       <div className={styles.child_container}>
         <div>
           <h3>{t("h1")}</h3>
-          <a href="mailto:@gmail.com" target="_blank">
+          <a href="mailto:ironcraft.us@gmail.com" target="_blank">
             <SiGmail />
-            @gmail.com
+            ironcraft.us@gmail.com
           </a>
-          <a href="tel:" target="_blank">
+          <a href="tel:9172396443" target="_blank">
             <AiOutlinePhone />
-            EN: (xxx) xxx xxxx
+            EN: (917) 239 6443
           </a>
-          <a href="tel:" target="_blank">
+          <a href="tel:3473685916" target="_blank">
             <AiOutlinePhone />
-            RU: (xxx) xxx xxxx
+            RU: (347) 368 5916
           </a>
           {/* <a href="" target="_blank">
             <FaInstagram /> Instagram
