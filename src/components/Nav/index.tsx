@@ -15,7 +15,7 @@ const Nav = () => {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const query = searchParams.get("type");
+  const query = searchParams?.get("type");
   const t = useTranslations("nav");
   const cur = useLocale();
   const url = query !== null ? `?type=${query}` : "";
