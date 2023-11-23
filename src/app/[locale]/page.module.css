@@ -76,10 +76,7 @@
 
 
 @media screen and (max-width: 1000px) and (min-width: 800px) {
-  .text_holder {
-      width: 95%;
-     
-  }
+   
   .sec {
     background-position: right;
   }
@@ -95,31 +92,41 @@
     padding: 25vh 1vw;     
   }
   .text_holder {
-      padding: 2vh 0 0 5vw;
+      padding: 0vh 0 0 5vw;
   }
 
   .buttons {
+    margin-top: 2rem;
     flex-direction: column;
   }
  
   .text_holder >  h1{
-    font-size: 2.7rem ;
+    font-size: 3.2rem ;
  
+  }
+  .text_holder > .buttons > a { 
+    font-size: 1.55rem;
   }
  
 }
+
+ 
 
 @media screen and (max-width: 420px) {
   
-  .text_holder {
-      width: 100%;
+  .text_holder > .buttons > a {
+    width: 240px;
+    font-size: 1.3rem;
+  }
+ 
+  .text_holder > h1{
+    font-size: 3rem ;
  
   }
  
 }
 
-
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 320px) {
   
   .text_holder > .buttons > a {
     width: 230px;
@@ -127,7 +134,7 @@
   }
  
   .text_holder > h1{
-    font-size: 2.2rem ;
+    font-size: 2.3rem ;
  
   }
  
