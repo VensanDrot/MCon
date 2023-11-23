@@ -29,6 +29,7 @@ const Footer = () => {
     setData({
       ...data,
       [e.target.name]: value,
+      locale: useLocale(),
     });
   };
 
