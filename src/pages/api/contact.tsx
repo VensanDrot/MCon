@@ -1,7 +1,18 @@
-import { transporter } from "../../config/nodemailer";
 import hbs from "nodemailer-express-handlebars";
 import path from "path";
 import { NextApiRequest, NextApiResponse } from "next";
+import nodemailer from "nodemailer";
+
+var email = process.env.NEXT_PUBLIC_EMAIL;
+var pass = process.env.NEXT_PUBLIC_EMAIL_PASS;
+
+export const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: email,
+    pass: pass,
+  },
+});
 
 const handlebarOptions: any = {
   viewEngine: {
