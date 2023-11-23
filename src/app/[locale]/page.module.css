@@ -74,22 +74,12 @@
   }
 }
 
-
-@media screen and (max-width: 1000px) and (min-width: 800px) {
-   
-  .sec {
-    background-position: right;
-  }
-
- 
-}
-
  
 
 @media screen and (max-width: 840px) {
    
   .sec {
-    padding: 25vh 1vw;     
+    padding: 25vh 0 0;     
   }
   .text_holder {
       padding: 0vh 0 0 5vw;
