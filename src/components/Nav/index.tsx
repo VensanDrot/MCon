@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Squash as Hamburger } from "hamburger-react";
 import Image from "next/image";
 import styles from "./index.module.css";
@@ -15,9 +15,12 @@ const Nav = () => {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  //query
   const query = searchParams?.get("type");
+  //lang
   const t = useTranslations("nav");
   const cur = useLocale();
+  //final url
   const url = query !== null ? `?type=${query}` : "";
   //navbar control
   const [navbar, setNavbar] = useState(false);
@@ -25,15 +28,17 @@ const Nav = () => {
 
   //console.log(url);
 
-  const isBrowser = () => typeof window !== "undefined";
+  useEffect(() => {
+    const isBrowser = () => typeof window !== "undefined";
 
-  const changeBackground = () => {
-    window.scrollY >= 100 ? setNavbar(true) : setNavbar(false);
-  };
+    const changeBackground = () => {
+      window.scrollY >= 100 ? setNavbar(true) : setNavbar(false);
+    };
 
-  if (isBrowser()) {
-    window.addEventListener("scroll", changeBackground);
-  }
+    if (isBrowser()) {
+      window.addEventListener("scroll", changeBackground);
+    }
+  }, []);
 
   return (
     <header

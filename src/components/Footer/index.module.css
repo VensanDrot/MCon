@@ -63,7 +63,7 @@
 }
 
 .success {
-    color: var(--green)
+    color: var(--orange)
 }
 
 .child_container > form > div {

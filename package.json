@@ -12,15 +12,16 @@
     "hamburger-react": "^2.5.0",
     "next": "14.0.1",
     "next-intl": "^2.22.1",
+    "nodemailer-express-handlebars": "^6.1.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
- 
     "swiper": "^11.0.3"
   },
   "devDependencies": {
     "@types/node": "^20",
+    "@types/nodemailer-express-handlebars": "^4.0.5",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "typescript": "^5"

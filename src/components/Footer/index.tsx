@@ -6,7 +6,7 @@ import { FaFacebookF, FaInstagram } from "react-icons/fa";
 //import { sendContactForm } from "@/lib/api";
 import { AiOutlinePhone } from "react-icons/ai";
 import { SiGmail } from "react-icons/si";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { sendContactForm } from "@/lib/api";
 
 const Footer = () => {
@@ -15,7 +15,9 @@ const Footer = () => {
     name: "",
     email: "",
     number: "",
+    locale: useLocale(),
   });
+
   const t = useTranslations("footer");
   const [result, setResult] = useState("");
   const [active, setActive] = useState(true);
@@ -33,7 +35,31 @@ const Footer = () => {
   // submit form
   const handleClick = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    await sendContactForm();
+    setActive(false);
+
+    try {
+      await sendContactForm(data)
+        .then((res) => res.json())
+        .then((json) => {
+          if (!json.message.code) {
+            setResult(json.message);
+            setData({
+              name: "",
+              email: "",
+              number: "",
+              locale: "",
+            });
+          } else {
+            setResult("Error occured");
+          }
+
+          setTimeout(function () {
+            setActive(true);
+          }, 5500);
+        });
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -116,7 +142,7 @@ const Footer = () => {
           </div>
 
           <button type="submit" className={`yellow ${active ? "" : "disabled"}`} disabled={active ? false : true}>
-            Submit
+            {t("button")}
           </button>
         </form>
       </div>

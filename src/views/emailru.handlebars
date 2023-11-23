@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <style type="text/css">
+        body,
+        table,
+        td,
+        a {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        table {
+            border-collapse: collapse !important;
+        }
+
+        body {
+            height: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+
+        }
+
+        @media screen and (max-width: 2000px) {
+
+            .two-columns .column {
+
+                max-width: 300px;
+                display: inline-block;
+                vertical-align: top;
+                text-align: center;
+            }
+
+            .tds {
+                background-image: url('https://www.symmetria.com/media/znrlw1mk/symmetria-iv-drips.jpg') !important;
+                background-position: center;
+                background-size: cover;
+                height: 400px !important;
+                display: block;
+                text-align: center;
+                padding-top: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+
+            .p_message {
+                font-size: 1.2rem;
+                font-weight: 200;
+            }
+        }
+    </style>
+</head>
+
+<body style="margin: 0 !important; padding: 0 !important; background: #ccc">
+
+    <center style="
+      width: 100%;
+      table-layout: fixed;
+      background-color: #ccc;
+      padding-bottom: 60px;">
+        <table style="      
+      background-color: #fff;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 600px;
+      border-spacing: 0;
+      font-family: sans-serif;
+      color: black;">
+
+            <tr>
+                <td height="15" style="background-color: #ccc;"></td>
+            </tr>
+            {{!--
+
+            <tr>
+                <td style="padding: 14px 0 4px; text-align: center;">
+                    <a href="https://med-web-navy.vercel.app/" style="height: 70px; display: block;">
+                        <img src="https://i.ibb.co/ZBc7z46/logo.png" style="width: 200px !important;">
+                    </a>
+                </td>
+            </tr> --}}
+
+
+
+
+
+            <tr>
+                <td style="padding: 10px;">
+                    <h1 class="message">Уважаеммый {{name}}, мы получили ваше письмо!</h1>
+                    <p class="p_message">Мы свяжемся с вами в ближайшее время!</p>
+                    <p class="p_message">Если у вас возникнут вопросы мы всегда рады ответить на них!</p>
+                    <p class="p_message">Спасибо!</p>
+                </td>
+            </tr>
+
+
+            {{!-- <tr>
+                <td style="padding: 14px 0 14px; text-align: center;">
+                    <a href="https://med-web-navy.vercel.app/" style="height: 70px; display: block;">
+                        <img src="https://i.ibb.co/ZBc7z46/logo.png" style="width: 200px !important;">
+                    </a>
+                </td>
+            </tr> --}}
+
+            <tr>
+                <td height="15" style="background-color: #ccc;"></td>
+            </tr>
+
+        </table>
+
+    </center>
+
+</body>
+
+</html>

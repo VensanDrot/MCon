@@ -47,9 +47,23 @@ html {
     padding: 0.375rem 0.75rem;
     line-height: 1.5;
     font-weight: 300;
-    border-radius: 100px;
+    border-radius: 5px;
 }
 
 .yellow:hover {
     background-color: var(--redish);
+}
+
+.error {
+  color: red !important;
+}
+
+.disabled {
+  opacity: 0.7;
+  border: 1px solid red !important;
+  pointer-events: none;
+}
+
+.required {
+  border-color: red !important;
 }

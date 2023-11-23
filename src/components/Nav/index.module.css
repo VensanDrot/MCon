@@ -8,7 +8,7 @@
     width: 100vw;
     color: var(--white);
     transition: var(--transition);
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.8 );
     z-index: 10000;
     
 }
@@ -139,9 +139,4 @@
     }
 }
 
-@media screen and (max-width: 400px) {
-   .nav_img {
-    height: 90px;
-}
-   
-}
+ 
