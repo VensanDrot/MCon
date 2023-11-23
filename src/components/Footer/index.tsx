@@ -11,11 +11,12 @@ import { sendContactForm } from "@/lib/api";
 
 const Footer = () => {
   // data
+  const loc = useLocale();
   const [data, setData] = useState({
     name: "",
     email: "",
     number: "",
-    locale: useLocale(),
+    locale: loc,
   });
 
   const t = useTranslations("footer");
@@ -29,7 +30,7 @@ const Footer = () => {
     setData({
       ...data,
       [e.target.name]: value,
-      locale: useLocale(),
+      locale: loc,
     });
   };
 
