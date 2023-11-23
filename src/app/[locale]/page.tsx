@@ -13,9 +13,14 @@ export default function Index() {
       <section className={`spacer ${styles.sec}`}>
         <div className={styles.text_holder}>
           <h1>{t("head_text")}</h1>
-          <a href="#handrails" className="yellow">
-            {t("head_button")}
-          </a>
+          <div className={styles.buttons}>
+            <a href="#handrails" className="yellow">
+              {t("head_button")}
+            </a>
+            <a href="#footer" className="yellow">
+              {t("head_button2")}
+            </a>
+          </div>
         </div>
       </section>
 

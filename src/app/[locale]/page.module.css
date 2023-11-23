@@ -8,34 +8,41 @@
 }
 
 .sec {
-  background: url("../../../public/bk.jpg") ;
-  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../public/slide_7.jpg") ;
+  height: 80vh;
   position: relative;
   background-size: cover;
   width: 100%;
-  padding: 20vh 20vw;
 }
 
 .text_holder {
   position: relative;
-  width: 65%;
-  height: 75%;
-  padding: 1.5rem;
-  /* background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(15px); */
+  width: 100%;
+  height: 100%;
+  padding: 14vh 0 0 10vw;
+ 
 }
 
 .text_holder > h1 {
-  font-size: 3.8rem;
-  width: 50%;
+  font-size: 5.8rem;
   margin-bottom: 1rem;
 }
 
-.text_holder > a {
-  position: absolute;
-  bottom: 2rem;
-  font-size: 1.5rem;
+.buttons {
+  display: flex;
+  width: 100%;
+  row-gap: 2rem;
+  gap: 2.2rem;
+ 
 }
+
+.text_holder > .buttons > a {
+  font-size: 1.5rem;
+  text-align: center;
+  width: 300px;
+}
+
+
 
 .slider_container {
   width: 85%;
@@ -53,17 +60,17 @@
   margin-bottom: 50px;
 }
 
+
+
 @media screen and (max-width: 1400px) {
-   .sec {
-    padding: 20vh 15vw;
-  }
+  
     .text_holder {
-      width: 100%;
-      height: 80%;
+      padding: 20vh 0 0 7vw;
+ 
     }
     .text_holder > h1 {
     font-size: 3.5rem;
-    width: 50%;
+   
   }
 }
 
@@ -71,32 +78,33 @@
 @media screen and (max-width: 1000px) and (min-width: 800px) {
   .text_holder {
       width: 95%;
-      height: 75%;
+     
+  }
+  .sec {
+    background-position: right;
   }
 
+ 
 }
 
  
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 840px) {
    
   .sec {
-    padding: 25vh 1vw;
-     
+    padding: 25vh 1vw;     
   }
   .text_holder {
-      width: 98%;
-      height: 95%;
+      padding: 2vh 0 0 5vw;
   }
-  
 
-  .text_holder > a {
-    font-size: 1.5rem;
+  .buttons {
+    flex-direction: column;
   }
  
-  .text_holder > h1{
-    font-size: 2.9rem ;
-    width: 90%;
+  .text_holder >  h1{
+    font-size: 2.7rem ;
+ 
   }
  
 }
@@ -105,6 +113,21 @@
   
   .text_holder {
       width: 100%;
+ 
+  }
+ 
+}
+
+
+@media screen and (max-width: 420px) {
+  
+  .text_holder > .buttons > a {
+    width: 230px;
+    font-size: 1.2rem;
+  }
+ 
+  .text_holder > h1{
+    font-size: 2.2rem ;
  
   }
  

@@ -7,7 +7,11 @@
   text-decoration: none;
   font-size: inherit;
   scroll-behavior: smooth;
- 
+  
+}
+
+body {
+  background-color: var(--black);
 }
 
 html {

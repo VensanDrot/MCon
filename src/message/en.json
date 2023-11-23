@@ -1,7 +1,8 @@
 {
     "main_page":{ 
-        "head_text": "We turn metal into art!",
+        "head_text": "We forge metal into art!",
         "head_button" : "View Catalog",
+        "head_button2" : "Request appointment",
         "ben_head":"Benefits of working with us",
         "ben1": {
             "header": "Professional experience:",

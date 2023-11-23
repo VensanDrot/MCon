@@ -65,7 +65,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className={styles.main_footer}>
+    <footer id="footer" className={styles.main_footer}>
       <div className={styles.child_container}>
         <div>
           <h3>{t("h1")}</h3>
