@@ -58,6 +58,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       name: data.name,
       number: data.number,
       email: data.email,
+      loc: data.locale === "ru" ? "Русский" : "Английский",
     },
   };
   let message = "Message was sent successfully!";
