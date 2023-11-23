@@ -98,7 +98,11 @@ const Footer = () => {
         >
           <h3>{t("h2")}</h3>
           {!active ? (
-            <h4 className={`${result !== "Message was sent successfully" ? "error" : ""}  ${styles.success}`}>
+            <h4
+              className={`${
+                result !== "Message was sent successfully!" && result !== "Письмо успешно отправлено!" ? "error" : ""
+              }  ${styles.success}`}
+            >
               {result}
             </h4>
           ) : (
