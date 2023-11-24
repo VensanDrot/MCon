@@ -11,8 +11,8 @@ export function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-  title: "MetalWork",
-  description: "New beggining for your houses.",
+  title: "IronCraft",
+  description: "We forge metal into art!",
 };
 
 export default async function LocaleLayout({
