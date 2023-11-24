@@ -19,10 +19,15 @@ const Footer = () => {
     locale: loc,
   });
 
+  const [error, setError] = useState({
+    name: "",
+    email: "",
+    number: "",
+  });
+
   const t = useTranslations("footer");
   const [result, setResult] = useState("");
   const [active, setActive] = useState(true);
-  const date = new Date().getFullYear();
 
   // handle form changes
   const handleChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -38,6 +43,36 @@ const Footer = () => {
   const handleClick = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setActive(false);
+
+    setError({
+      name: "",
+      email: "",
+      number: "",
+    });
+
+    if (data.name.replace(/\s+/g, "").length < 1 || !data.name || data.email.split("@")[0].length < 1) {
+      setError({
+        ...error,
+        name: t("name_er"),
+      });
+      return;
+    }
+
+    if (data.number.replace(/\s+/g, "").length <= 9 || !data.number) {
+      setError({
+        ...error,
+        number: t("number_er"),
+      });
+      return;
+    }
+
+    if (data.email.replace(/\s+/g, "").length < 1 || !data.email) {
+      setError({
+        ...error,
+        email: t("email_er"),
+      });
+      return;
+    }
 
     try {
       await sendContactForm(data)
@@ -110,6 +145,7 @@ const Footer = () => {
           )}
           <div>
             <label>{t("hold1")}: </label>
+            <label className="error">{error.name}</label>
             <input
               type="text"
               name="name"
@@ -121,6 +157,7 @@ const Footer = () => {
 
           <div>
             <label>{t("hold2")}:</label>
+            <label className="error">{error.email}</label>
             <input
               type="email"
               name="email"
@@ -131,6 +168,7 @@ const Footer = () => {
           </div>
           <div>
             <label>{t("hold3")}:</label>
+            <label className="error">{error.number}</label>
             <input
               type="text"
               name="number"
@@ -140,7 +178,6 @@ const Footer = () => {
                   event.preventDefault();
                 }
               }}
-              minLength={9}
               maxLength={10}
               value={data.number}
               onChange={(e) => handleChange(e)}

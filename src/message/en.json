@@ -42,7 +42,10 @@
         "hold3": "Phone Number",
         "button": "Submit",
         "reply": "Message was sent successfully",
-        "b_req": "Bad request"
+        "b_req": "Bad request",
+        "name_er": "Please enter valid Name!",
+        "email_er": "Please enter valid Email!",
+        "number_er": "Please enter valid Number!"
     },
 
     "galery": {
