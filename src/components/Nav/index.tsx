@@ -9,6 +9,7 @@ import rus from "../../../public/russia-flag-round-circle-icon.svg";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next-intl/client";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { useSearchParams } from "next/navigation";
 
 const Nav = () => {
@@ -99,6 +100,24 @@ const Nav = () => {
           <Link href="/#handrails" className="yellow">
             {t("l4")}
           </Link>
+          <div className={styles.socials_container}>
+            <a href="https://facebook.com/ironcraft.us" target="_blank">
+              <div className={`${styles.icon} ${styles.facebook}`}>
+                <div className={styles.tooltip}>Facebook</div>
+                <span>
+                  <FaFacebookF />
+                </span>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/ironcraft_ny/" target="_blank">
+              <div className={`${styles.icon} ${styles.instagram}`}>
+                <div className={styles.tooltip}>Instagram</div>
+                <span>
+                  <FaInstagram />
+                </span>
+              </div>
+            </a>
+          </div>
         </div>
 
         {/* Mobile */}
@@ -152,6 +171,24 @@ const Nav = () => {
           <Link href="/#handrails" className="yellow" onClick={() => setOpen(!isOpen)}>
             {t("l4")}
           </Link>
+          <div className={styles.socials_container}>
+            <a href="https://facebook.com/ironcraft.us" target="_blank">
+              <div className={`${styles.icon} ${styles.facebook}`}>
+                <div className={styles.tooltip}>Facebook</div>
+                <span>
+                  <FaFacebookF />
+                </span>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/ironcraft_ny/" target="_blank">
+              <div className={`${styles.icon} ${styles.instagram}`}>
+                <div className={styles.tooltip}>Instagram</div>
+                <span>
+                  <FaInstagram />
+                </span>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </header>
@@ -159,14 +196,3 @@ const Nav = () => {
 };
 
 export default Nav;
-
-//  href={{
-//     pathname: `bookingpage`,
-//     query: {
-//       icon: e.icon,
-//       description: e.description,
-//       product: e.name,
-//       price: e.price,
-//       type: e.productType,
-//     },
-//   }}

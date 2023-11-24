@@ -11,6 +11,7 @@ import { sendContactForm } from "@/lib/api";
 
 const Footer = () => {
   // data
+  const date = new Date().getFullYear();
   const loc = useLocale();
   const [data, setData] = useState({
     name: "",
@@ -119,13 +120,13 @@ const Footer = () => {
             <AiOutlinePhone />
             RU: (347) 368 5916
           </a>
-          {/* <a href="" target="_blank">
+          <a href="https://www.instagram.com/ironcraft_ny/" target="_blank">
             <FaInstagram /> Instagram
           </a>
-          <a href="" target="_blank">
+          <a href="https://facebook.com/ironcraft.us" target="_blank">
             <FaFacebookF />
             Facebook
-          </a> */}
+          </a>
         </div>
         {/* Contact Form */}
 
@@ -191,6 +192,9 @@ const Footer = () => {
             {t("button")}
           </button>
         </form>
+      </div>
+      <div className={styles.reserved}>
+        <small>&copy; IronCraft. All rights reserved. {date} </small>
       </div>
     </footer>
   );

@@ -66,7 +66,7 @@
   transition: var(--transition);
 }
 
-.nav_link_holder a:hover{
+.nav_link_holder > a:hover{
     color: var(--orange);
 }
 
@@ -91,14 +91,14 @@
 }
 
 .nav_link_mobile_active {
-    height: 230px;
+    height: 290px;
     transition:  var(--transition);
     overflow: hidden;
 }
 
 .nav_container_mobile{ 
     overflow: hidden;
-    height: 320px;
+    height: 380px;
     background-color: rgba(0, 0, 0, 1);
 }
 
@@ -111,6 +111,91 @@
     height: 0;
 }
 
+/* socials */
+
+/* socials */
+
+.socials_container {
+    display: flex;
+    transition: all var(--transition);
+    align-items: center;    
+    gap: 0.1rem;
+}
+ 
+
+.icon {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.icon > span { 
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.gap {
+    gap: 1rem;
+}
+
+.icon > * {
+    font-size: 25px;
+    line-height: 55px;
+}
+
+.icon:hover .tooltip{
+    opacity: 1;
+    pointer-events: auto;
+    bottom:  -50px;
+}
+
+.tooltip {
+    z-index: 999;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    bottom: 0;
+    background: var(--white);
+    font-size: 15px;
+    line-height: 30px;
+    padding: 0px 4px;
+    border-radius: 26px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    transition: all var(--transition) cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tooltip:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background: inherit;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.facebook:hover > .tooltip, 
+.facebook:hover .tooltip::before {
+    color: var(--white);
+    background: #3b5999;
+}
+
+.instagram:hover > .tooltip, 
+.instagram:hover .tooltip::before {
+    color: var(--white);
+    background: #e1306c;
+}
+ 
+ 
 
 @media screen and (max-width: 1300px) {
     .nav_box{
@@ -126,6 +211,7 @@
      .nav_container_mobile{ 
     height: 100px;
 }
+    
 }
 
   
@@ -137,6 +223,7 @@
     .nav_link_holder{ 
         display: none;
     }
+    
 }
 
  
