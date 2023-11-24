@@ -55,6 +55,7 @@ const Footer = () => {
         ...error,
         name: t("name_er"),
       });
+      setActive(true);
       return;
     }
 
@@ -63,6 +64,7 @@ const Footer = () => {
         ...error,
         number: t("number_er"),
       });
+      setActive(true);
       return;
     }
 
@@ -71,6 +73,7 @@ const Footer = () => {
         ...error,
         email: t("email_er"),
       });
+      setActive(true);
       return;
     }
 
