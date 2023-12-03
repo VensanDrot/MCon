@@ -11,6 +11,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next-intl/client";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { useSearchParams } from "next/navigation";
+import { Switch } from "antd";
 
 const Nav = () => {
   const router = useRouter();
@@ -89,13 +90,33 @@ const Nav = () => {
             {t("l3")}
           </Link>
 
-          <button
+          {/* <button
             onClick={() => {
               router.replace(pathname + url, { locale: cur === "ru" ? "en" : "ru" });
             }}
           >
             <Image src={cur === "ru" ? usa : rus} height={50} width={50} alt={cur === "ru" ? "/en" : "/ru"} />
-          </button>
+          </button> */}
+
+          <Switch
+            defaultChecked={cur !== "en" ? true : false}
+            checkedChildren="EN"
+            unCheckedChildren="RU"
+            onChange={() => {
+              setTimeout(function () {
+                router.replace(pathname + url, { locale: cur === "ru" ? "en" : "ru" });
+              }, 150);
+            }}
+          />
+
+          {/* <button
+            onClick={() => {
+              router.replace(pathname + url, { locale: cur === "ru" ? "en" : "ru" });
+            }}
+            className="yellow"
+          >
+            {cur !== "en" ? "Rus" : "En"}
+          </button> */}
 
           <Link href="/#handrails" className="yellow">
             {t("l4")}
@@ -161,13 +182,26 @@ const Nav = () => {
           >
             {t("l3")}
           </Link>
-          <button
+
+          {/* <button
             onClick={() => {
               router.replace(pathname + url, { locale: cur === "ru" ? "en" : "ru" });
             }}
           >
             <Image src={cur === "ru" ? usa : rus} height={50} width={50} alt={cur === "ru" ? "/en" : "/ru"} />
-          </button>
+          </button> */}
+
+          <Switch
+            defaultChecked={cur !== "en" ? true : false}
+            checkedChildren="EN"
+            unCheckedChildren="RU"
+            onChange={() => {
+              setTimeout(function () {
+                router.replace(pathname + url, { locale: cur === "ru" ? "en" : "ru" });
+              }, 150);
+            }}
+          />
+
           <Link href="/#handrails" className="yellow" onClick={() => setOpen(!isOpen)}>
             {t("l4")}
           </Link>

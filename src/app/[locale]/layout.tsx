@@ -31,6 +31,9 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
+      <head>
+        <meta name="google-site-verification" content="noG9zzslhAFuSJ0d_dwKlJ2NK_Gehhpl3JIAn4TMuRs" />
+      </head>
       <body className={inter.className} suppressHydrationWarning={true}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Nav />

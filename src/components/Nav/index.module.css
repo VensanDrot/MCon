@@ -102,10 +102,7 @@
     background-color: rgba(0, 0, 0, 1);
 }
 
-.nav_link_holder > button {
-    border: 0;
-    background-color: transparent;
-}
+ 
 
 .nav_container_mobile  .tooltip{ 
     height: 0;
@@ -194,7 +191,6 @@
     color: var(--white);
     background: #e1306c;
 }
- 
  
 
 @media screen and (max-width: 1300px) {

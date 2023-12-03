@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "antd": "^5.11.5",
     "hamburger-react": "^2.5.0",
     "next": "14.0.1",
     "next-intl": "^2.22.1",
