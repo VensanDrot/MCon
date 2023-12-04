@@ -38,7 +38,15 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <head>
         <script src={`https://www.googletagmanager.com/gtag/js?id=${GTM_ID}`} />
-
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2HDY5R1N7X"></script>
+        <script id="ga-script">
+          {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2HDY5R1N7X');
+        `}
+        </script>
         <script id="ga-script">
           {`
     window.dataLayer = window.dataLayer || [];

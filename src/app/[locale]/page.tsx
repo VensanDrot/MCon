@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import styles from "./page.module.css";
 import { handrail, gates, elements } from "@/components/Data";
 import Slider from "@/components/Slider";
+import Link from "next/link";
 import GetStarted from "@/components/GetStarted";
 
 export default function Index() {
@@ -14,12 +15,12 @@ export default function Index() {
         <div className={styles.text_holder}>
           <h1>{t("head_text")}</h1>
           <div className={styles.buttons}>
-            <a href="#handrails" className="yellow">
+            <Link href="#handrails" className="yellow">
               {t("head_button")}
-            </a>
-            <a href="#footer" className="yellow">
+            </Link>
+            <Link href="#footer" className="yellow">
               {t("head_button2")}
-            </a>
+            </Link>
           </div>
         </div>
       </section>
