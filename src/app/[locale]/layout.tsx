@@ -32,37 +32,9 @@ export default async function LocaleLayout({
     console.log(error);
   }
 
-  const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
-
   return (
     <html lang={locale}>
-      <head>
-        <script src={`https://www.googletagmanager.com/gtag/js?id=${GTM_ID}`} />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2HDY5R1N7X"></script>
-        <script id="ga-script">
-          {`
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-2HDY5R1N7X');
-        `}
-        </script>
-        <script id="ga-script">
-          {`
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', '${GTM_ID}', {
-      page_path: window.location.pathname,
-    });
-        `}
-        </script>
-      </head>
       <body className={inter.className} suppressHydrationWarning={true}>
-        <noscript>
-          <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TSXS88M6" height="0" width="0"></iframe>
-        </noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TSXS88M6" height="0" width="0"></iframe>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Nav />
           {children}
