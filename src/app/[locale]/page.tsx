@@ -27,20 +27,48 @@ export default function Index() {
 
       <GetStarted />
       <div id="handrails" className={`spacer ${styles.slider_container} `}>
-        <h1>{t("h1")}</h1>
+        <Link
+          href={{
+            pathname: `galery`,
+            query: {
+              type: "handrails",
+            },
+          }}
+        >
+          <h1>{t("h1")}</h1>
+        </Link>
         <div>
           <Slider data={handrail} index={"1"} />
         </div>
       </div>
       <div id="gates" className={`spacer ${styles.slider_container} `}>
-        <h1>{t("h2")}</h1>
+        <Link
+          href={{
+            pathname: `galery`,
+            query: {
+              type: "gates",
+            },
+          }}
+        >
+          {" "}
+          <h1>{t("h2")}</h1>
+        </Link>
 
         <div>
           <Slider data={gates} index={"2"} />
         </div>
       </div>
       <div id="elements" className={`spacer ${styles.slider_container} `}>
-        <h1>{t("h3")}</h1>
+        <Link
+          href={{
+            pathname: `galery`,
+            query: {
+              type: "elements",
+            },
+          }}
+        >
+          <h1>{t("h3")}</h1>
+        </Link>
 
         <div className={styles.last}>
           <Slider data={elements} index={"3"} />

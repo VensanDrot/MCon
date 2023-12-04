@@ -51,7 +51,7 @@
   row-gap: 1rem;
 }
 
-.slider_container > h1 {
+.slider_container > a >h1 {
   color: var(--white);
   font-size: 2rem;
 }
