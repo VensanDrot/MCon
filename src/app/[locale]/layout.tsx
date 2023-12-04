@@ -32,7 +32,7 @@ export default async function LocaleLayout({
     console.log(error);
   }
 
-  https: return (
+  return (
     <html lang={locale}>
       <head>
         <script
