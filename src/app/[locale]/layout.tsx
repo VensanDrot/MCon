@@ -32,9 +32,12 @@ export default async function LocaleLayout({
     console.log(error);
   }
 
+  const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
+
   return (
     <html lang={locale}>
       <head>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GTM_ID}`} />;
         <script
           dangerouslySetInnerHTML={{
             __html: `function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
