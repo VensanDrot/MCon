@@ -13,6 +13,9 @@ export function generateStaticParams() {
 export const metadata: Metadata = {
   title: "IronCraft",
   description: "We forge metal into art!",
+  verification: {
+    google: "noG9zzslhAFuSJ0d_dwKlJ2NK_Gehhpl3JIAn4TMuRs",
+  },
 };
 
 export default async function LocaleLayout({
@@ -31,9 +34,6 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <head>
-        <meta name="google-site-verification" content="noG9zzslhAFuSJ0d_dwKlJ2NK_Gehhpl3JIAn4TMuRs" />
-      </head>
       <body className={inter.className} suppressHydrationWarning={true}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Nav />
