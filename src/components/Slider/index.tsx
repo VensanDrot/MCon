@@ -15,9 +15,10 @@ interface IProps {
     link: string;
   }[];
   index: string;
+  alt: string;
 }
 
-const Slider: FC<IProps> = ({ data, index }) => {
+const Slider: FC<IProps> = ({ data, index, alt }) => {
   return (
     <>
       <div className={styles.swiper_box}>
@@ -51,13 +52,7 @@ const Slider: FC<IProps> = ({ data, index }) => {
           {data.map((e, index) => {
             return (
               <SwiperSlide key={index}>
-                <Image
-                  alt="The guitarist in the concert."
-                  src={e.link}
-                  fill
-                  sizes="height:100%; width:auto;"
-                  loading="lazy"
-                />
+                <Image src={e.link} fill={true} alt={`${alt}`} />
               </SwiperSlide>
             );
           })}

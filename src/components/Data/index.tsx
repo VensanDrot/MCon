@@ -42,63 +42,66 @@ export const handrail = [
 
 export const elements = [
   {
-    link: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaDRSMMJ1MTSz9nz4XrFfRQjURqeByKxlmLYCRMT1WCfNcF1tueKEjxaC3U_lt-Utr83RG611IC26dAzwQu2BKfG6Y_T=s1600",
+    link: "https://drive.google.com/uc?export=view&id=1VBAx8x4tai633G-09Vn41nEG-zqdZLJW",
   },
   {
-    link: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaDdVfPImj7VchfyejuJqLc0n8t75Lf5W8mr4MKFz_Rz0MGHd7abYzdKPn5xhYCWxSOgzrB1Jv5uyVvlhZa82MbhiFMj=s1600",
+    link: "https://drive.google.com/uc?export=view&id=1WKREIV_Ko-3DYaSJICanvKSLCN8BD4ij",
   },
   {
-    link: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaA6hAp_YIBUqyhcfntM6ly1SwDEbrOdBFTXMv0_78uQrdkucnReI3HRckbhLVlGA6hCncvvjn3cCTGK3_4SmGTSopVhAw=s1600",
+    link: "https://drive.google.com/uc?export=view&id=1lRIruBnywro84_fvJrx_J_7gLkDEpuoy",
   },
   {
-    link: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaCqUTJKQKgZNxSZO7JwBXfnkWWKM9sjeXFLdlZVb9-HdToIeWjP3ztWEl_Kh8MBU0Yxp9RfpkgMMYsXnL45af9962A4=s1600",
+    link: "https://drive.google.com/uc?export=view&id=1z9H43UxwTHgy0srAR1CTmu3dFlmeceA_",
   },
   {
-    link: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaCSzpDQ5wzahiXR3IoEZ9Kwn9OkpCOXkKl8KxoQgBCMTzr_ZTegxwkn0eeqrG-ifJNtRV85hRgqLkqx4eBhQFur5Td95Q=s1600",
+    link: "https://drive.google.com/uc?export=view&id=19iSIF6tpWw5b9NDYQJwYzLb0mmSEDzi8",
   },
   {
-    link: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaAEbSXE4Mo2lBkAL3tTWjLR2qzIzU8J_J_Uk7MD7FkuE91xBLG-NVDBr6vBi3XWSX3RgNf6HZKs85hfzbxWk8vE65D3dA=s1600",
+    link: "https://drive.google.com/uc?export=view&id=1hZJcoOHF32seSbwWUiZGAD8icp51v_iU",
   },
   {
-    link: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaCxC9nVYOsq_a69OXV9FKptOylh8hYnwhy_BFkRbfD_E_JpbC-TlOq2J8QIskTtMvnS3pRWHgQoHqdIiG88Lgc9mDJl=s1600",
+    link: "https://drive.google.com/uc?export=view&id=1H7lAX4pEC0tQlXppZXRvPUH4D83bpA-X",
   },
   {
-    link: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaCuRwQjFARxtZWZK5Dmuk2_Wcywp5tXCc2TUKvN6SZbPpq05GHIx1HTEDnDyX4tnQ4-ef6XYil5jiEu6IFYIdgJfftyng=s1600",
+    link: "https://drive.google.com/uc?export=view&id=1UfX5SeTohM92gVGIDR4swdBkJfusRle5",
+  },
+  {
+    link: "https://drive.google.com/uc?export=view&id=1aIm7H4dkRMY8VpW03xS5mE_ji42mMNzk",
   },
 ];
 
 export const gates = [
   {
-    link: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaCF8n_Gik-2N0S1Gjf4UtG8uUL9q_2cHRyFKtCLc1OJptSFj1Da5mCIy2nDh2gvkm_ViNEbbCUGb5kjHisCQe2UmG4PPQ=s1600",
+    link: "https://drive.google.com/uc?export=view&id=1UZbtMGVDcl2AKbZcTnalnC1dpndYo4B4",
   },
   {
-    link: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaBK68TQKFDgV0VB-jx3ekM7sCQKkw_Vlx3Y6PSVCj9zgUkQzGAAxX_wAq9d3Furm34aucFHHB-WKHcqESIdK1S3USC86A=s1600",
+    link: "https://drive.google.com/uc?export=view&id=1YPJFTu1_gdIkhaeoLi2VO40cu23ldg-Z",
   },
   {
-    link: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaCyVbkWxiiuiub2LydKMWNNFUIxDmKnhj3NswcQsUF_D_7dXJNv_vekhAW2inUCSQp_3PxCCXr8rgYls29xPqXN27musA=s1600",
+    link: "https://drive.google.com/uc?export=view&id=17E5hkdO3kqXlBknYQPTcNcaIgWv6wNYT",
   },
   {
-    link: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaBqO5mCHLbZj-MrCAGouhVfZc0HB7lIdcnA9nIXKSrB_35DrJJpzKjFc_IAnNTyssDVJgk3I-6-P6Wlv6DW7uEYF6XT=s1600",
+    link: "https://drive.google.com/uc?export=view&id=1oKXYHiWpPNz3tMZ4Ac3ewRHPIUVNajPz",
   },
   {
-    link: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaB5XTGYVwN3HkffBRJzTdjKhtJ_lFiz9qTScBaPZU3wBrYxPbDbTVyFGn4PAVsqVbEuV48-n_eG9Uy27xHDa4PAxnQhjA=s1600",
+    link: "https://drive.google.com/uc?export=view&id=1ci0myD2SuVn-PbUurxY1U5fCh3bW86ya",
   },
   {
-    link: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaDg5tuKnXyTi3E8wK5CIhTL094OVAgw9PAtccylOd3gFlvT09AlRbAuBWK1-imIzhPKvEXuqd56sXbodr9J-Pu_P9Yw=s1600",
+    link: "https://drive.google.com/uc?export=view&id=1imkuzcZ58VUdd3E_g2fcnmJeCFosbxLh",
   },
   {
-    link: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaDSdMEmsRV_SS1r3OvWHpa6JJknrBMulzrsQgfVH3JHtGXsH81PU3-4sJ6rJfPvPLarnS7deFTwvXh4WC69_r46Buz-Qw=s1600",
+    link: "https://drive.google.com/uc?export=view&id=12tsWYXCmsvARdCUAOBt8FkqPMlSDmRR5",
   },
   {
-    link: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaDeucBJOK-rzdHofOQFVUK2j--Cf9jF0ffdL4Kd0fqSD7k2mayXvb4fiV_PtqcN5J7Z84685fWFURmW0JxkdH98N2-17A=s1600",
+    link: "https://drive.google.com/uc?export=view&id=1nEVol6xplh2hrMcZMihLawSBVw2YKzsO",
   },
   {
-    link: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaDGMIblH0glc44Qt5zdhlSFD_z0KK9hclXT3xNT-kLP9z0vjg02YdO6Vza-ipfoqsHAJpJlEdPYWh5vHNkiYC3ZdBja=s1600",
+    link: "https://drive.google.com/uc?export=view&id=1EcYVBkzRS7oYgoSfP20B4RpLMy_AyDD8",
   },
   {
-    link: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaByxLiUML9gLhiejTF8TdaMu2cxiR7bjRJXoiby1m7O_hhKJhaFvJt47FMQiZECXm3h4fRo6Kk8K8vrm5LzvHHldoQwew=s1600",
+    link: "https://drive.google.com/uc?export=view&id=1N4ANq-89qlcJyWwN5QAkDRxjTRwnYihp",
   },
   {
-    link: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaCs9eckFYf2SdmDzy08d7IDoKM352OumlgWBK9y8wJmpVyN3L51C5p-y292uOUdd1MJ3R_L3F5jO4XE-dxJtuYYt7N0=s1600",
+    link: "https://drive.google.com/uc?export=view&id=11LikSMqiZeYt_qMTMX3rcjLew5gEuYDJ",
   },
 ];

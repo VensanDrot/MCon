@@ -38,7 +38,7 @@ export default function Index() {
           <h1>{t("h1")}</h1>
         </Link>
         <div>
-          <Slider data={handrail} index={"1"} />
+          <Slider alt="Handrails" data={handrail} index={"1"} />
         </div>
       </div>
       <div id="gates" className={`spacer ${styles.slider_container} `}>
@@ -55,7 +55,7 @@ export default function Index() {
         </Link>
 
         <div>
-          <Slider data={gates} index={"2"} />
+          <Slider alt="Gates" data={gates} index={"2"} />
         </div>
       </div>
       <div id="elements" className={`spacer ${styles.slider_container} `}>
@@ -71,7 +71,7 @@ export default function Index() {
         </Link>
 
         <div className={styles.last}>
-          <Slider data={elements} index={"3"} />
+          <Slider alt="Elements" data={elements} index={"3"} />
         </div>
       </div>
     </main>

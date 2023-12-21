@@ -10,8 +10,9 @@
   },
   "dependencies": {
     "antd": "^5.11.5",
+    "eslint-config-next": "^14.0.4",
     "hamburger-react": "^2.5.0",
-    "next": "14.0.1",
+    "next": "^14.0.4",
     "next-intl": "^2.22.1",
     "nodemailer-express-handlebars": "^6.1.0",
     "prop-types": "^15.8.1",
