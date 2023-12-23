@@ -3,10 +3,10 @@ import styles from "./index.module.css";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-import i1 from "../../../public/1.png";
-import i2 from "../../../public/2.png";
-import i3 from "../../../public/3.png";
-import i4 from "../../../public/4.png";
+import i1 from "../../../public/1.webp";
+import i2 from "../../../public/2.webp";
+import i3 from "../../../public/3.webp";
+import i4 from "../../../public/4.webp";
 
 const GetStarted = () => {
   const t = useTranslations("main_page");
