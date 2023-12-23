@@ -3,7 +3,8 @@ import React, { FC } from "react";
 import styles from "./index.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -12,7 +13,7 @@ import "./index.css";
 
 interface IProps {
   data: {
-    link: string;
+    link: StaticImageData;
   }[];
   index: string;
   alt: string;
@@ -52,7 +53,7 @@ const Slider: FC<IProps> = ({ data, index, alt }) => {
           {data.map((e, index) => {
             return (
               <SwiperSlide key={index}>
-                <Image src={e.link} fill={true} alt={`${alt}`} />
+                <Image src={e.link} fill sizes="height: auto; width: auto;" alt={`${alt}`} />
               </SwiperSlide>
             );
           })}

@@ -1,107 +1,137 @@
+import h1 from "../../../public/handrails/h1.webp";
+import h2 from "../../../public/handrails/h2.webp";
+import h3 from "../../../public/handrails/h3.webp";
+import h4 from "../../../public/handrails/h4.webp";
+import h5 from "../../../public/handrails/h5.webp";
+import h6 from "../../../public/handrails/h6.webp";
+import h7 from "../../../public/handrails/h7.webp";
+import h8 from "../../../public/handrails/h8.webp";
+import h9 from "../../../public/handrails/h13.webp";
+import h10 from "../../../public/handrails/h10.webp";
+import h11 from "../../../public/handrails/h11.webp";
+import h12 from "../../../public/handrails/h12.webp";
+import e1 from "../../../public/elements/1.webp";
+import e2 from "../../../public/elements/2.webp";
+import e3 from "../../../public/elements/3.webp";
+import e4 from "../../../public/elements/4.webp";
+import e5 from "../../../public/elements/5.webp";
+import e6 from "../../../public/elements/6.webp";
+import e7 from "../../../public/elements/7.webp";
+import e8 from "../../../public/elements/8.webp";
+import e9 from "../../../public/elements/9.webp";
+import g1 from "../../../public/gates/1.webp";
+import g2 from "../../../public/gates/2.webp";
+import g3 from "../../../public/gates/3.webp";
+import g4 from "../../../public/gates/4.webp";
+import g5 from "../../../public/gates/5.webp";
+import g6 from "../../../public/gates/6.webp";
+import g7 from "../../../public/gates/7.webp";
+import g8 from "../../../public/gates/8.webp";
+import g9 from "../../../public/gates/9.webp";
+import g10 from "../../../public/gates/10.webp";
+import g11 from "../../../public/gates/11.webp";
+
 export const handrail = [
   {
-    link: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaBofzmaYMJDDcq2BADWItP3iWCRCgl6aG2TEG2nUNn_c4sPaUnbdBbU3gYUygccKUXQ9XrrVAt3DdBOL2cfoIpKvitUEQ=s1600",
+    link: h1,
   },
   {
-    link: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaARfryxj-JTVrPMjADsueVqlVKgowGPXECVYy-BIc_FRF8H-YIUZmBhHyiAeXXK4wo0OzQkBV_XUBjNTce6RwrmZ1GPMg=s1600",
+    link: h2,
   },
   {
-    link: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaCvzWebTTmhInq2QVDBvtAwwxHCNYR7GPF6DW5HmovsdD1fnCgMWpXSgkape0ntqqruu-Tw64-AUE_etlNL9NO8a5qJeQ=s1600",
+    link: h3,
   },
   {
-    link: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaCOcqJbEWs18uLLuyMe2emBrHaSwzFjJmqxciZyen44FG_AAcmR8I6S7RPJufn2e9d6z1EvtUZyNTPMY2VS3iDJA6Em=s1600",
+    link: h4,
   },
   {
-    link: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaCcHNcwJJUgf4frC6mfshkKzdY7HjWOxv2xi6isPcrDDjbw_u7tqCV0-oLdJ2FFabrwGDenQS8KNA1chHP4X-TK_9q6_A=s1600",
+    link: h5,
   },
   {
-    link: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaCT2QBUIaxtNi_SEny2Lz0XmOs_htKo_zfITPWdHbhStwVVfpNqhNm61qRYGX4iodn8EQkptjlSUMHexsUBbEqW2vuJ2A=s1600",
+    link: h6,
   },
   {
-    link: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaCYyg5yfvOihyWwZr8fKV9e23hYDkJxF0cnnXZK-92G_CtImgE8Ag0THptQeSMX_3LIczxutzdeacJixPbYtKjsELETwg=s1600",
+    link: h7,
   },
   {
-    link: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaDiQt1ymxNbIo-qEBeQHe1KH2kzzFpz1VookuoyYmehnnjczgiDm7SyjhHMYbXRb5JKnhONuHKBXy98E7mGY0SstsJ6=s1600",
+    link: h8,
   },
   {
-    link: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaD_pGZFih7qRULRcmFTPpSsttRTqiS0M167LFl5rCtz6-p2hMqOgcaG0LzKoS9D9CDNcqauYv1kw4HEqlN78P8VabIb=s1600",
+    link: h9,
   },
   {
-    link: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaATImgws5exDgoYXiFCWm7zcBT1aFP6uymTw0ab6aSN7UGR8tabtUcG66tLDj2w3dlQyLaQ_OtB_YBc-rTpWFhL1CFpLQ=s1600",
+    link: h10,
   },
   {
-    link: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaARth3yCbj-tpPAPaS7eZBqvWqDhnFB6B-ovrOqnHF8n1Gfm2nfXcQQhnbfQTOWKceoHjn4L06E35Uq75BEx-SORe8pRA=s1600",
+    link: h11,
   },
   {
-    link: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaA9Yjlm3DsV9BbzjO5I5-7LcNZXLQaNBfacCsia9dc3Mksv3bd4E9v75c3xw06nfYz91_XLYtoMO2oTFk8OHXQjXJiypw=s1600",
-  },
-  {
-    link: "https://lh3.googleusercontent.com/drive-viewer/AK7aPaBHddhqPDVcJq_9po6lt5TDv69B1fb4rkMArql9QqE4rLuh3WCGI4kv2QNw85ZfMmdpYIeJQYDjtHc-k_F4lLYyh8fXtw=s1600",
+    link: h12,
   },
 ];
 
 export const elements = [
   {
-    link: "https://drive.google.com/uc?export=view&id=1VBAx8x4tai633G-09Vn41nEG-zqdZLJW",
+    link: e1,
   },
   {
-    link: "https://drive.google.com/uc?export=view&id=1WKREIV_Ko-3DYaSJICanvKSLCN8BD4ij",
+    link: e2,
   },
   {
-    link: "https://drive.google.com/uc?export=view&id=1lRIruBnywro84_fvJrx_J_7gLkDEpuoy",
+    link: e3,
   },
   {
-    link: "https://drive.google.com/uc?export=view&id=1z9H43UxwTHgy0srAR1CTmu3dFlmeceA_",
+    link: e4,
   },
   {
-    link: "https://drive.google.com/uc?export=view&id=19iSIF6tpWw5b9NDYQJwYzLb0mmSEDzi8",
+    link: e5,
   },
   {
-    link: "https://drive.google.com/uc?export=view&id=1hZJcoOHF32seSbwWUiZGAD8icp51v_iU",
+    link: e6,
   },
   {
-    link: "https://drive.google.com/uc?export=view&id=1H7lAX4pEC0tQlXppZXRvPUH4D83bpA-X",
+    link: e7,
   },
   {
-    link: "https://drive.google.com/uc?export=view&id=1UfX5SeTohM92gVGIDR4swdBkJfusRle5",
+    link: e8,
   },
   {
-    link: "https://drive.google.com/uc?export=view&id=1aIm7H4dkRMY8VpW03xS5mE_ji42mMNzk",
+    link: e9,
   },
 ];
 
 export const gates = [
   {
-    link: "https://drive.google.com/uc?export=view&id=1UZbtMGVDcl2AKbZcTnalnC1dpndYo4B4",
+    link: g1,
   },
   {
-    link: "https://drive.google.com/uc?export=view&id=1YPJFTu1_gdIkhaeoLi2VO40cu23ldg-Z",
+    link: g2,
   },
   {
-    link: "https://drive.google.com/uc?export=view&id=17E5hkdO3kqXlBknYQPTcNcaIgWv6wNYT",
+    link: g3,
   },
   {
-    link: "https://drive.google.com/uc?export=view&id=1oKXYHiWpPNz3tMZ4Ac3ewRHPIUVNajPz",
+    link: g4,
   },
   {
-    link: "https://drive.google.com/uc?export=view&id=1ci0myD2SuVn-PbUurxY1U5fCh3bW86ya",
+    link: g5,
   },
   {
-    link: "https://drive.google.com/uc?export=view&id=1imkuzcZ58VUdd3E_g2fcnmJeCFosbxLh",
+    link: g6,
   },
   {
-    link: "https://drive.google.com/uc?export=view&id=12tsWYXCmsvARdCUAOBt8FkqPMlSDmRR5",
+    link: g7,
   },
   {
-    link: "https://drive.google.com/uc?export=view&id=1nEVol6xplh2hrMcZMihLawSBVw2YKzsO",
+    link: g8,
   },
   {
-    link: "https://drive.google.com/uc?export=view&id=1EcYVBkzRS7oYgoSfP20B4RpLMy_AyDD8",
+    link: g9,
   },
   {
-    link: "https://drive.google.com/uc?export=view&id=1N4ANq-89qlcJyWwN5QAkDRxjTRwnYihp",
+    link: g10,
   },
   {
-    link: "https://drive.google.com/uc?export=view&id=11LikSMqiZeYt_qMTMX3rcjLew5gEuYDJ",
+    link: g11,
   },
 ];
