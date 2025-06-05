@@ -112,9 +112,9 @@ const Footer = () => {
             <SiGmail />
             ironcraft.us@gmail.com
           </a>
-          <a href="tel:9172396443" target="_blank">
+          <a href="tel:3473685913" target="_blank">
             <AiOutlinePhone />
-            EN: (917) 239 6443
+            EN: (347) 368 5913
           </a>
           <a href="tel:3473685916" target="_blank">
             <AiOutlinePhone />
