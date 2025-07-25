@@ -1,22 +1,21 @@
 "use client";
 
-import React, { useState, useRef } from "react";
-import styles from "./index.module.css";
+import React, { useState } from "react";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
-//import { sendContactForm } from "@/lib/api";
 import { AiOutlinePhone } from "react-icons/ai";
 import { SiGmail } from "react-icons/si";
 import { useLocale, useTranslations } from "next-intl";
 import { sendContactForm } from "@/lib/api";
+import { motion } from "framer-motion";
 
 const Footer = () => {
-  // data
   const date = new Date().getFullYear();
   const loc = useLocale();
   const [data, setData] = useState({
     name: "",
     email: "",
     number: "",
+    message: "",
     locale: loc,
   });
 
@@ -30,7 +29,6 @@ const Footer = () => {
   const [result, setResult] = useState("");
   const [active, setActive] = useState(true);
 
-  // handle form changes
   const handleChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
     const value = e.target.value;
     setData({
@@ -40,7 +38,6 @@ const Footer = () => {
     });
   };
 
-  // submit form
   const handleClick = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setActive(false);
@@ -88,6 +85,7 @@ const Footer = () => {
               name: "",
               email: "",
               number: "",
+              message: "",
               locale: "",
             });
           } else {
@@ -104,97 +102,163 @@ const Footer = () => {
   };
 
   return (
-    <footer id="footer" className={styles.main_footer}>
-      <div className={styles.child_container}>
-        <div>
-          <h3>{t("h1")}</h3>
-          <a href="mailto:ironcraft.us@gmail.com" target="_blank">
-            <SiGmail />
-            ironcraft.us@gmail.com
-          </a>
-          <a href="tel:3473685913" target="_blank">
-            <AiOutlinePhone />
-            EN: (347) 368 5913
-          </a>
-          <a href="tel:3473685916" target="_blank">
-            <AiOutlinePhone />
-            RU: (347) 368 5916
-          </a>
-          <a href="https://www.instagram.com/ironcraft_ny/" target="_blank">
-            <FaInstagram /> Instagram
-          </a>
-          <a href="https://facebook.com/ironcraft.us" target="_blank">
-            <FaFacebookF />
-            Facebook
-          </a>
+    <footer id="footer" className="bg-black text-white">
+      <div className="container-custom py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 max-lg:p-3 gap-12">
+          {/* Contact Information */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="space-y-6"
+          >
+            <h3 className="text-3xl font-bold text-orange mb-4">{t("h1")}</h3>
+
+            <div className="space-y-4">
+              <motion.a
+                href="mailto:ironcraft.us@gmail.com"
+                target="_blank"
+                className="flex items-center space-x-3 text-white hover:text-orange transition-colors duration-300 group"
+                whileHover={{ x: 10 }}
+              >
+                <SiGmail className="text-2xl text-orange group-hover:scale-110 transition-transform duration-300" />
+                <span>ironcraft.us@gmail.com</span>
+              </motion.a>
+
+              <motion.a
+                href="tel:3473685913"
+                target="_blank"
+                className="flex items-center space-x-3 text-white hover:text-orange transition-colors duration-300 group"
+                whileHover={{ x: 10 }}
+              >
+                <AiOutlinePhone className="text-2xl text-orange group-hover:scale-110 transition-transform duration-300" />
+                <span>EN: (347) 368 5913</span>
+              </motion.a>
+
+              <motion.a
+                href="tel:3473685916"
+                target="_blank"
+                className="flex items-center space-x-3 text-white hover:text-orange transition-colors duration-300 group"
+                whileHover={{ x: 10 }}
+              >
+                <AiOutlinePhone className="text-2xl text-orange group-hover:scale-110 transition-transform duration-300" />
+                <span>RU: (347) 368 5916</span>
+              </motion.a>
+
+              <motion.a
+                href="https://www.instagram.com/ironcraft_ny/"
+                target="_blank"
+                className="flex items-center space-x-3 text-white hover:text-orange transition-colors duration-300 group"
+                whileHover={{ x: 10 }}
+              >
+                <FaInstagram className="text-2xl text-orange group-hover:scale-110 transition-transform duration-300" />
+                <span>Instagram</span>
+              </motion.a>
+
+              <motion.a
+                href="https://facebook.com/ironcraft.us"
+                target="_blank"
+                className="flex items-center space-x-3 text-white hover:text-orange transition-colors duration-300 group"
+                whileHover={{ x: 10 }}
+              >
+                <FaFacebookF className="text-2xl text-orange group-hover:scale-110 transition-transform duration-300" />
+                <span>Facebook</span>
+              </motion.a>
+            </div>
+          </motion.div>
+
+          {/* Contact Form */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <form onSubmit={handleClick} className="bg-grey-bk rounded-2xl p-5 border border-orange/20 ">
+              <h3 className="text-3xl font-bold text-orange mb-6 text-center">{t("h2")}</h3>
+
+              {!active && (
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className={`mb-6 p-4 rounded-lg text-center ${
+                    result !== "Message was sent successfully!" && result !== "Письмо успешно отправлено!"
+                      ? "bg-red-500/20 text-red-400"
+                      : "bg-green-500/20 text-green-400"
+                  }`}
+                >
+                  {result}
+                </motion.div>
+              )}
+
+              <div className="space-y-6">
+                <div>
+                  <label className="block text-white font-semibold mb-2">{t("hold1")}</label>
+                  {error.name && <p className="text-red-400 text-sm mb-2">{error.name}</p>}
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder={t("hold1")}
+                    value={data.name}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-black border border-orange/30 rounded-lg text-white focus:border-orange focus:outline-none transition-colors duration-300"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-white font-semibold mb-2">{t("hold2")}</label>
+                  {error.email && <p className="text-red-400 text-sm mb-2">{error.email}</p>}
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder={t("hold2")}
+                    value={data.email}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-black border border-orange/30 rounded-lg text-white focus:border-orange focus:outline-none transition-colors duration-300"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-white font-semibold mb-2">{t("hold3")}</label>
+                  {error.number && <p className="text-red-400 text-sm mb-2">{error.number}</p>}
+                  <input
+                    type="text"
+                    name="number"
+                    placeholder={t("hold3")}
+                    onKeyPress={(event) => {
+                      if (!/[0-9]/.test(event.key)) {
+                        event.preventDefault();
+                      }
+                    }}
+                    maxLength={10}
+                    value={data.number}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-black border border-orange/30 rounded-lg text-white focus:border-orange focus:outline-none transition-colors duration-300"
+                  />
+                </div>
+
+                <motion.button
+                  type="submit"
+                  disabled={!active}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className={`w-full py-4 px-6 rounded-lg font-bold text-lg transition-all duration-300 ${
+                    active ? "bg-orange text-white hover:bg-redish" : "bg-gray-600 text-gray-400 cursor-not-allowed"
+                  }`}
+                >
+                  {t("button")}
+                </motion.button>
+              </div>
+            </form>
+          </motion.div>
         </div>
-        {/* Contact Form */}
-
-        <form
-          onSubmit={(e) => {
-            handleClick(e);
-          }}
-        >
-          <h3>{t("h2")}</h3>
-          {!active ? (
-            <h4
-              className={`${
-                result !== "Message was sent successfully!" && result !== "Письмо успешно отправлено!" ? "error" : ""
-              }  ${styles.success}`}
-            >
-              {result}
-            </h4>
-          ) : (
-            ""
-          )}
-          <div>
-            <label>{t("hold1")}: </label>
-            <label className="error">{error.name}</label>
-            <input
-              type="text"
-              name="name"
-              placeholder={`${t("hold1")}`}
-              value={data.name}
-              onChange={(e) => handleChange(e)}
-            />
-          </div>
-
-          <div>
-            <label>{t("hold2")}:</label>
-            <label className="error">{error.email}</label>
-            <input
-              type="email"
-              name="email"
-              placeholder={`${t("hold2")}`}
-              value={data.email}
-              onChange={(e) => handleChange(e)}
-            />
-          </div>
-          <div>
-            <label>{t("hold3")}:</label>
-            <label className="error">{error.number}</label>
-            <input
-              type="text"
-              name="number"
-              placeholder={`${t("hold3")}`}
-              onKeyPress={(event) => {
-                if (!/[0-9]/.test(event.key)) {
-                  event.preventDefault();
-                }
-              }}
-              maxLength={10}
-              value={data.number}
-              onChange={(e) => handleChange(e)}
-            />
-          </div>
-
-          <button type="submit" className={`yellow ${active ? "" : "disabled"}`} disabled={active ? false : true}>
-            {t("button")}
-          </button>
-        </form>
       </div>
-      <div className={styles.reserved}>
-        <small>&copy; IronCraft. All rights reserved. {date} </small>
+
+      <div className="border-t border-orange/20 py-6">
+        <div className="container-custom text-center">
+          <small className="text-white/60">&copy; IronCraft. All rights reserved. {date}</small>
+        </div>
       </div>
     </footer>
   );

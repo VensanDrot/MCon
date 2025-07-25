@@ -11,6 +11,7 @@
   "dependencies": {
     "antd": "^5.11.5",
     "eslint-config-next": "^14.0.4",
+    "framer-motion": "^12.23.9",
     "hamburger-react": "^2.5.0",
     "next": "^14.0.4",
     "next-intl": "^2.22.1",
@@ -22,10 +23,14 @@
     "swiper": "^11.0.3"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^20",
     "@types/nodemailer-express-handlebars": "^4.0.5",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.5",
     "typescript": "^5"
   }
 }
