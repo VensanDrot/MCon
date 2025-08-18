@@ -7,10 +7,13 @@ import { SiGmail } from "react-icons/si";
 import { useLocale, useTranslations } from "next-intl";
 import { sendContactForm } from "@/lib/api";
 import { motion } from "framer-motion";
+import { fbqTrack, fbqCustom } from "@/lib/fbq";
 
 const Footer = () => {
   const date = new Date().getFullYear();
   const loc = useLocale();
+  const t = useTranslations("footer");
+
   const [data, setData] = useState({
     name: "",
     email: "",
@@ -25,79 +28,77 @@ const Footer = () => {
     number: "",
   });
 
-  const t = useTranslations("footer");
   const [result, setResult] = useState("");
   const [active, setActive] = useState(true);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
     const value = e.target.value;
-    setData({
-      ...data,
+    setData((prev) => ({
+      ...prev,
       [e.target.name]: value,
       locale: loc,
-    });
+    }));
+  };
+
+  const fail = (field: "name" | "email" | "number", msg: string) => {
+    setError((prev) => ({ ...prev, [field]: msg }));
+    setActive(true);
+    // Track validation error
+    fbqCustom("ContactFormError", { reason: field, locale: loc, source: "footer" });
   };
 
   const handleClick = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setActive(false);
+    setError({ name: "", email: "", number: "" });
 
-    setError({
-      name: "",
-      email: "",
-      number: "",
-    });
-
+    // --- Client-side validation
     if (data.name.replace(/\s+/g, "").length < 1 || !data.name || data.email.split("@")[0].length < 1) {
-      setError({
-        ...error,
-        name: t("name_er"),
-      });
-      setActive(true);
-      return;
+      return fail("name", t("name_er"));
     }
-
     if (data.number.replace(/\s+/g, "").length <= 9 || !data.number) {
-      setError({
-        ...error,
-        number: t("number_er"),
-      });
-      setActive(true);
-      return;
+      return fail("number", t("number_er"));
     }
-
     if (data.email.replace(/\s+/g, "").length < 1 || !data.email) {
-      setError({
-        ...error,
-        email: t("email_er"),
-      });
-      setActive(true);
-      return;
+      return fail("email", t("email_er"));
     }
 
     try {
-      await sendContactForm(data)
-        .then((res) => res.json())
-        .then((json) => {
-          if (!json.message.code) {
-            setResult(json.message);
-            setData({
-              name: "",
-              email: "",
-              number: "",
-              message: "",
-              locale: "",
-            });
-          } else {
-            setResult("Error occured");
-          }
+      const res = await sendContactForm(data);
+      const json = await res.json();
 
-          setTimeout(function () {
-            setActive(true);
-          }, 5500);
+      if (!json?.message?.code) {
+        setResult(json.message);
+
+        // Reset form
+        setData({
+          name: "",
+          email: "",
+          number: "",
+          message: "",
+          locale: "",
         });
-    } catch (error) {
-      console.log(error);
+
+        // --- Tracking on success
+        fbqTrack("Lead", {
+          content_name: "Footer Contact Form",
+          locale: loc,
+          source: "footer",
+        });
+        fbqCustom("ContactFormSubmitted", {
+          locale: loc,
+          source: "footer",
+        });
+      } else {
+        setResult("Error occured");
+        fbqCustom("ContactFormError", { reason: "server_response_code", locale: loc, source: "footer" });
+      }
+    } catch (e) {
+      console.log(e);
+      setResult("Error occured");
+      fbqCustom("ContactFormError", { reason: "network_or_throw", locale: loc, source: "footer" });
+    } finally {
+      setTimeout(() => setActive(true), 5500);
     }
   };
 
@@ -227,9 +228,7 @@ const Footer = () => {
                     name="number"
                     placeholder={t("hold3")}
                     onKeyPress={(event) => {
-                      if (!/[0-9]/.test(event.key)) {
-                        event.preventDefault();
-                      }
+                      if (!/[0-9]/.test(event.key)) event.preventDefault();
                     }}
                     maxLength={10}
                     value={data.number}
@@ -243,6 +242,7 @@ const Footer = () => {
                   disabled={!active}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+                  onClick={() => fbqCustom("ContactFormAttempt", { source: "footer", locale: loc })}
                   className={`w-full py-4 px-6 rounded-lg font-bold text-lg transition-all duration-300 ${
                     active ? "bg-orange text-white hover:bg-redish" : "bg-gray-600 text-gray-400 cursor-not-allowed"
                   }`}
