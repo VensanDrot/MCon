@@ -179,7 +179,7 @@ const Footer = () => {
             <form onSubmit={handleClick} className="bg-grey-bk rounded-2xl p-5 border border-orange/20 ">
               <h3 className="text-3xl font-bold text-orange mb-6 text-center">{t("h2")}</h3>
 
-              {!active && (
+              {!active && result && (
                 <motion.div
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
